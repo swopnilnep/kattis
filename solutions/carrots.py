@@ -1,2 +1,4 @@
+# https://open.kattis.com/problems/carrots
+
 from sys import stdin
-print(stdin.readline().split()[1])
+print( str(stdin.readline()).strip().split(' ')[1] )
