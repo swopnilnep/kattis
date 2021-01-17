@@ -13,3 +13,8 @@ For Python3:
 cd <problem>
 python <problem>.py < samples/<sample>.in
 ```
+
+## License
+
+All code is provided under the MIT license.
+https://mit-license.org/
