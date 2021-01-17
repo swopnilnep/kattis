@@ -14,6 +14,18 @@ cd <problem>
 python <problem>.py < samples/<sample>.in
 ```
 
+For Rust: 
+```zsh
+cd <problem>
+javac <problem>.java && ./<problem>.rs < samples/<sample>.in
+```
+
+For Java: 
+```zsh
+cd <problem>
+javac <problem>.java && ./<problem>.java < samples/<sample>.in
+```
+
 ## License
 
 All code is provided under the MIT license.
