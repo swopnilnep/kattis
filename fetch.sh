@@ -21,5 +21,5 @@ echo "
 $problem
 Author: Swopnil Shrestha https://open.kattis.com/users/shresw01
 Problem: https://open.kattis.com/problems/$problem
-Execution: python3 $problem.py < <sample>.in
+Execution: python3 $problem.py < ./samples/<sample>.in
 " > "$problempath/readme.txt"
