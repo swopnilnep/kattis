@@ -17,13 +17,13 @@ python <problem>.py < samples/<sample>.in
 For Rust: 
 ```zsh
 cd rust/<problem>
-javac <problem>.java && ./<problem>.rs < samples/<sample>.in
+rustc main.rs && ./main < samples/<sample>.in
 ```
 
 For Java: 
 ```zsh
 cd java/<problem>
-javac <problem>.java && ./<problem>.java < samples/<sample>.in
+javac <problem>.java && java ./<problem> < samples/<sample>.in
 ```
 
 ## License
