@@ -7,7 +7,7 @@ do
 done
 echo "Fetching problem: $problem";
 
-problempath="./python3/$problem"
+problempath="./$language/$problem"
 mkdir $problempath
 echo "Created $problempath"
 
@@ -15,11 +15,20 @@ curl "https://open.kattis.com/problems/$problem/file/statement/samples.zip" --ou
 mkdir "$problempath/samples"
 unzip "$problempath/$problem.zip" -d "$problempath/samples"
 rm "$problempath/$problem.zip"
-touch "$problempath/$problem.py"
-
+ 
 echo "
 $problem
-Author: Swopnil Shrestha https://open.kattis.com/users/shresw01
-Problem: https://open.kattis.com/problems/$problem
-Execution: python3 $problem.py < ./samples/<sample>.in
-" > "$problempath/readme.txt"
+Author: Swopnil Shrestha
+Problem: https://open.kattis.com/problems/$problem" > "$problempath/readme.txt"
+
+if [ $language = "rust" ]; then
+    echo "Creating rust files"
+    touch "$problempath/main.rs"
+elif [ $language = "python3" ]; then
+    echo "Creating python files"
+    touch "$problempath/$problem.py"
+    echo "Execution: python3 $problem.py < ./samples/<sample>.in" >> "$problempath/readme.txt"
+elif [ $language = "java" ]; then
+    echo "Creating java files"
+    touch "$problempath/$problem.java"
+fi
