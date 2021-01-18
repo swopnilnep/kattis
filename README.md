@@ -10,8 +10,20 @@ In order to dynamically generate readme and templates for each problem, I am usi
 
 For Python3: 
 ```zsh
-cd <problem>
+cd python3/<problem>
 python <problem>.py < samples/<sample>.in
+```
+
+For Rust: 
+```zsh
+cd rust/<problem>
+rustc main.rs && ./main < samples/<sample>.in
+```
+
+For Java: 
+```zsh
+cd java/<problem>
+javac <problem>.java && java ./<problem> < samples/<sample>.in
 ```
 
 ## License
